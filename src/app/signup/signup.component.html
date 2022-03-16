@@ -1,0 +1,76 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="form">
+      <div class="login">
+        <mat-card-title>Register</mat-card-title>
+        <mat-form-field class="name">
+          <input
+            type="text"
+            matInput
+            placeholder="Username"
+            formControlName="username"
+          />
+
+          <mat-error class="error" *ngIf="username?.hasError('required')">
+            FullName is required
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="phoneNumber">
+          <input
+            type="text"
+            matInput
+            placeholder="Phonenumber"
+            formControlName="phoneNumber"
+          />
+
+          <mat-error class="error" *ngIf="phoneNumber?.hasError('required')">
+            Phonenumber is required
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="email">
+          <input
+            type="text"
+            matInput
+            placeholder="Email"
+            formControlName="email"
+          />
+
+          <mat-error class="error" *ngIf="email?.hasError('required')">
+            email is required
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="password">
+          <input
+            type="password"
+            matInput
+            placeholder="Password"
+            formControlName="password"
+            matInput
+            [type]="hide ? 'password' : 'text'"
+          />
+          <mat-error class="error" *ngIf="password?.hasError('required')">
+            Password is required
+          </mat-error>
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <div class="button">
+          <button mat-raised-button color="primary" (click)="signUp()">
+            Register
+          </button>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

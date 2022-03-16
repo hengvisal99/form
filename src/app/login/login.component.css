@@ -1,0 +1,23 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+}
+.mat-card {
+  width: 20%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.name,
+.password {
+  width: 100%;
+}
+.mat-error {
+  font-size: 12px;
+}

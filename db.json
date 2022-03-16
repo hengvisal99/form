@@ -1,0 +1,63 @@
+{
+  "userlist": [
+    {
+      "firstName": "heng ",
+      "lastName": "visal",
+      "name": "visal",
+      "password": "visalzxz",
+      "id": 2
+    },
+    {
+      "firstName": "el",
+      "lastName": "la",
+      "name": "ela",
+      "password": "visalzxz",
+      "id": 3
+    },
+    {
+      "firstName": "chan",
+      "lastName": "ny",
+      "name": "ny",
+      "password": "visalzxz",
+      "id": 4
+    },
+    {
+      "firstName": "ly",
+      "lastName": "long ",
+      "name": "long",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "username": "hengvisal",
+      "phoneNumber": "0128123123",
+      "email": "hengvisal350@gmail.com",
+      "password": "visalzxz",
+      "id": 6
+    },
+    {
+      "username": "visal",
+      "phoneNumber": "012312312312312",
+      "email": "visalzxz@gmail.com",
+      "password": "visal",
+      "id": 7
+    },
+    {
+      "username": "nha",
+      "phoneNumber": "123123123123",
+      "email": "nha@gmail.com",
+      "password": "nha",
+      "id": 8
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

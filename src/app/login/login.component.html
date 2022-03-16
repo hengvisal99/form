@@ -1,0 +1,50 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="form">
+      <div class="login">
+        <mat-card-title>Login</mat-card-title>
+        <mat-form-field class="name">
+          <input
+            type="text"
+            matInput
+            placeholder="Username"
+            formControlName="username"
+          />
+
+          <mat-error class="error" *ngIf="username?.hasError('required')">
+            Name is required
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="password">
+          <input
+            type="password"
+            matInput
+            placeholder="Password"
+            formControlName="password"
+            matInput
+            [type]="hide ? 'password' : 'text'"
+          />
+          <mat-error class="error" *ngIf="password?.hasError('required')">
+            Password is required
+          </mat-error>
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <div class="button">
+          <button mat-raised-button color="primary" (click)="login()">
+            Login
+          </button>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
